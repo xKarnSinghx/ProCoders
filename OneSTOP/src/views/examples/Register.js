@@ -1,6 +1,13 @@
 
+
 import React from "react";
 
+
+
+
+import React from "react";
+
+// reactstrap components
 
 import {
   Button,
@@ -35,7 +42,14 @@ class Register extends React.Component {
                   onClick={e => e.preventDefault()}
                 >
                   <span className="btn-inner--icon">
+
                     <i className="fab fa-github"></i>
+
+                    <img
+                      alt="..."
+                      src={require("assets/img/icons/common/github.svg")}
+                    />
+
                   </span>
                   <span className="btn-inner--text">Github</span>
                 </Button>
@@ -46,7 +60,14 @@ class Register extends React.Component {
                   onClick={e => e.preventDefault()}
                 >
                   <span className="btn-inner--icon">
+
                     <i className="fab fa-google"></i>
+
+                    <img
+                      alt="..."
+                      src={require("assets/img/icons/common/google.svg")}
+                    />
+
                   </span>
                   <span className="btn-inner--text">Google</span>
                 </Button>

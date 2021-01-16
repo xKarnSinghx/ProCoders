@@ -40,7 +40,11 @@ class AdminNavbar extends React.Component {
         >
           <Container className="px-4">
             <NavbarBrand to="/" tag={Link}>
+
             <span className="nav-link-inner--text">One Stop</span>
+
+              <img alt="..." src={require("assets/img/brand/argon-react-white.png")} />
+
             </NavbarBrand>
             <button className="navbar-toggler" id="navbar-collapse-main">
               <span className="navbar-toggler-icon" />
@@ -50,7 +54,14 @@ class AdminNavbar extends React.Component {
                 <Row>
                   <Col className="collapse-brand" xs="6">
                     <Link to="/">
+
                     <h1>One Stop</h1>
+
+                      <img
+                        alt="..."
+                        src={require("assets/img/brand/argon-react.png")}
+                      />
+
                     </Link>
                   </Col>
                   <Col className="collapse-close" xs="6">
@@ -68,7 +79,11 @@ class AdminNavbar extends React.Component {
                 <NavItem>
                   <NavLink className="nav-link-icon" to="/" tag={Link}>
                     <i className="ni ni-planet" />
+
                     <span className="nav-link-inner--text">Home</span>
+
+                    <span className="nav-link-inner--text">Dashboard</span>
+
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -91,6 +106,18 @@ class AdminNavbar extends React.Component {
                     <span className="nav-link-inner--text">Login</span>
                   </NavLink>
                 </NavItem>
+
+                <NavItem>
+                  <NavLink
+                    className="nav-link-icon"
+                    to="/admin/user-profile"
+                    tag={Link}
+                  >
+                    <i className="ni ni-single-02" />
+                    <span className="nav-link-inner--text">Profile</span>
+                  </NavLink>
+                </NavItem>
+
               </Nav>
             </UncontrolledCollapse>
           </Container>
