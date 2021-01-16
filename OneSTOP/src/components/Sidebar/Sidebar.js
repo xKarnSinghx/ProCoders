@@ -1,7 +1,6 @@
 
 import React from "react";
 import { NavLink as NavLinkRRD, Link } from "react-router-dom";
-// nodejs library to set properties for components
 import { PropTypes } from "prop-types";
 
 // reactstrap components
@@ -72,17 +71,6 @@ class Sidebar extends React.Component {
   render() {
     const { routes, logo } = this.props;
     let navbarBrandProps;
-    if (logo && logo.innerLink) {
-      navbarBrandProps = {
-        to: logo.innerLink,
-        tag: Link
-      };
-    }else if (logo && logo.outterLink) {
-      navbarBrandProps = {
-        href: logo.outterLink,
-        target: "_blank"
-      };
-    }
     return (
       <Navbar
         className="navbar-vertical fixed-left navbar-light bg-white"
@@ -100,49 +88,7 @@ class Sidebar extends React.Component {
           </button>
           {/* Brand */}
 
-          <h1>One Stop</h1>
-          {/* User */}
-
-          {logo ? (
-            <NavbarBrand className="pt-0" {...navbarBrandProps}>
-              <img
-                alt={logo.imgAlt}
-                className="navbar-brand-img"
-                src={logo.imgSrc}
-              />
-            </NavbarBrand>
-          ) : null}
-          {/* User */}
-          <Nav className="align-items-center d-md-none">
-            <UncontrolledDropdown nav>
-              <DropdownToggle nav className="nav-link-icon">
-                <i className="ni ni-bell-55" />
-              </DropdownToggle>
-              <DropdownMenu
-                aria-labelledby="navbar-default_dropdown_1"
-                className="dropdown-menu-arrow"
-                right
-              >
-                <DropdownItem>Action</DropdownItem>
-                <DropdownItem>Another action</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Something else here</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-            <UncontrolledDropdown nav>
-              <DropdownToggle nav>
-                <Media className="align-items-center">
-                  <span className="avatar avatar-sm rounded-circle">
-                    <img
-                      alt="..."
-                      src={require("assets/img/theme/team-1-800x800.jpg")}
-                    />
-                  </span>
-                </Media>
-              </DropdownToggle>
-            </UncontrolledDropdown>
-          </Nav>
-
+          <h1>One Stop</h1>  
           {/* Collapse */}
           <Collapse navbar isOpen={this.state.collapseOpen}>
             {/* Collapse header */}
@@ -153,19 +99,7 @@ class Sidebar extends React.Component {
                   <h1>One Stop</h1>
                 </Col>
 
-                {logo ? (
-                  <Col className="collapse-brand" xs="6">
-                    {logo.innerLink ? (
-                      <Link to={logo.innerLink}>
-                        <img alt={logo.imgAlt} src={logo.imgSrc} />
-                      </Link>
-                    ) : (
-                      <a href={logo.outterLink}>
-                        <img alt={logo.imgAlt} src={logo.imgSrc} />
-                      </a>
-                    )}
-                  </Col>
-                ) : null}
+
 
                 <Col className="collapse-close" xs="6">
                   <button
@@ -182,23 +116,7 @@ class Sidebar extends React.Component {
 
             
 
-            {/* Form */}
-            <Form className="mt-4 mb-3 d-md-none">
-              <InputGroup className="input-group-rounded input-group-merge">
-                <Input
-                  aria-label="Search"
-                  className="form-control-rounded form-control-prepended"
-                  placeholder="Search"
-                  type="search"
-                />
-                <InputGroupAddon addonType="prepend">
-                  <InputGroupText>
-                    <span className="fa fa-search" />
-                  </InputGroupText>
-                </InputGroupAddon>
-              </InputGroup>
-            </Form>
-
+            
             {/* Navigation */}
             <Nav navbar>{this.createLinks(routes)}</Nav>
             {/* Divider */}
@@ -211,29 +129,19 @@ class Sidebar extends React.Component {
                 <NavLink href="https://www.linkedin.com/in/devdatta-pandey-2a4745199/">
 
                   <i className="fab fa-linkedin-in" />
-
-                  <i className="ni ni-ui-04" />
-
                   Devdatta Pandey
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://www.linkedin.com/in/karnsingh311/">
 
-                  <i className="fab fa-linkedin-in" aria-hidden="true" />
-
-                  <i className="ni ni-ui-04" aria-hidden="true" />
-
-                  Karn Kumar Singh
+                  <i className="fab fa-linkedin-in" aria-hidden="true" />Karn Kumar Singh
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://www.linkedin.com/in/shivam-tyagi-57b7341a6/">
 
                   <i className="fab fa-linkedin-in" />
-
-                  <i className="ni ni-ui-04" />
-
                   Shivam Tyagi
                 </NavLink>
               </NavItem>
@@ -241,9 +149,6 @@ class Sidebar extends React.Component {
                 <NavLink href="https://www.linkedin.com/in/mohd-zubair-3349871a1/">
 
                   <i className="fab fa-linkedin-in" />
-
-                  <i className="ni ni-ui-04" />
-
                   Mohd Zubair
                 </NavLink>
               </NavItem>
