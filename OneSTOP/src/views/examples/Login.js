@@ -1,20 +1,3 @@
-/*!
-
-=========================================================
-* Argon Dashboard React - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -50,11 +33,10 @@ class Login extends React.Component {
                   href="#pablo"
                   onClick={e => e.preventDefault()}
                 >
+
+                  
                   <span className="btn-inner--icon">
-                    <img
-                      alt="..."
-                      src={require("assets/img/icons/common/github.svg")}
-                    />
+                    <i className="fab fa-github"></i>
                   </span>
                   <span className="btn-inner--text">Github</span>
                 </Button>
@@ -65,10 +47,7 @@ class Login extends React.Component {
                   onClick={e => e.preventDefault()}
                 >
                   <span className="btn-inner--icon">
-                    <img
-                      alt="..."
-                      src={require("assets/img/icons/common/google.svg")}
-                    />
+                    <i className="fab fa-google"></i>
                   </span>
                   <span className="btn-inner--text">Google</span>
                 </Button>

@@ -1,29 +1,14 @@
-/*!
-
-=========================================================
-* Argon Dashboard React - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-// reactstrap components
+
 import { Container, Row, Col } from "reactstrap";
 
-// core components
-import AuthNavbar from "components/Navbars/AuthNavbar.js";
 
+import AuthNavbar from "components/Navbars/AuthNavbar.js";
 import routes from "routes.js";
+
+
+
 
 class Auth extends React.Component {
   componentDidMount() {
@@ -57,7 +42,8 @@ class Auth extends React.Component {
               <div className="header-body text-center mb-7">
                 <Row className="justify-content-center">
                   <Col lg="5" md="6">
-                    <h1 className="text-white">Welcome!</h1>
+
+                    <h1 className="text-white">Welcome! To One Stop</h1>
                   </Col>
                 </Row>
               </div>

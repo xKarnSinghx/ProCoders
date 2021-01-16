@@ -1,23 +1,11 @@
-/*!
 
-=========================================================
-* Argon Dashboard React - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
+
+
+
 // reactstrap components
+
 import {
   Button,
   Card,
@@ -35,6 +23,7 @@ import UserHeader from "components/Headers/UserHeader.js";
 
 class Profile extends React.Component {
   render() {
+    
     return (
       <>
         <UserHeader />
@@ -43,6 +32,9 @@ class Profile extends React.Component {
           <Row>
             <Col className="order-xl-2 mb-5 mb-xl-0" xl="4">
               <Card className="card-profile shadow">
+
+                
+
                 <Row className="justify-content-center">
                   <Col className="order-lg-2" lg="3">
                     <div className="card-profile-image">
@@ -97,6 +89,7 @@ class Profile extends React.Component {
                       </div>
                     </div>
                   </Row>
+
                   <div className="text-center">
                     <h3>
                       Jessica Jones
@@ -134,6 +127,7 @@ class Profile extends React.Component {
                     <Col xs="8">
                       <h3 className="mb-0">My account</h3>
                     </Col>
+
                     <Col className="text-right" xs="4">
                       <Button
                         color="primary"
@@ -144,6 +138,7 @@ class Profile extends React.Component {
                         Settings
                       </Button>
                     </Col>
+
                   </Row>
                 </CardHeader>
                 <CardBody>
