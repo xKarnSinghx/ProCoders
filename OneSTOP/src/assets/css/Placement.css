@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.SearchBarContainer{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+} 
+#institute-match{
+    padding: 20px;
+    width: 50vw;
+}
+
+.SearchBarContainer input{
+    margin-top: 20px;
+    width: 350px;
+    height: 50px;
+    padding: 10px 10px;
+    
+}
+
+.SearchBarContainer #search-institute{
+    background-color: #5e72e4;
+    height: 49.8px;
+    padding: 14px 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+.SearchBarContainer #search-institute:hover{
+    background-color: #172b4d;
+}
+
+.matched-institute{
+    display: flex;
+    flex-direction: column;
+}
+
+.matched-institute:hover{
+    background-color:#c4cad1b0;
+}
+
+.lower-part{
+    display: flex;
+    flex-direction: row;
+    max-height: 75vh;
+    padding: 0px 20px;
+   
+}
+
+.lower-part .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-top:100px ;
+}
+
+.lower-part .svg-image{
+    height: 100%;
+}
+
+.lower-part .content h1{
+    font-size: 30px;
+}
+
+.lower-part .content p{
+    font-size: 18px;
+}
+
+@media screen and (max-width:1300px){
+    .lower-part .content{
+        padding-top:70px ;
+    }
+}
+
+@media screen and (max-width:1100px){
+    .lower-part .content{
+        padding-top:10px ;
+    }
+}
+
+@media screen and (max-width:900px){
+    .lower-part{
+        flex-flow: wrap;
+    }
+}

@@ -1,10 +1,7 @@
-
 import React from "react";
 import { NavLink as NavLinkRRD, Link } from "react-router-dom";
-// nodejs library to set properties for components
 import { PropTypes } from "prop-types";
 
-// reactstrap components
 import {
   Collapse,
   DropdownMenu,
@@ -72,17 +69,6 @@ class Sidebar extends React.Component {
   render() {
     const { routes, logo } = this.props;
     let navbarBrandProps;
-    if (logo && logo.innerLink) {
-      navbarBrandProps = {
-        to: logo.innerLink,
-        tag: Link
-      };
-    }else if (logo && logo.outterLink) {
-      navbarBrandProps = {
-        href: logo.outterLink,
-        target: "_blank"
-      };
-    }
     return (
       <Navbar
         className="navbar-vertical fixed-left navbar-light bg-white"
@@ -99,19 +85,11 @@ class Sidebar extends React.Component {
             <span className="navbar-toggler-icon" />
           </button>
           {/* Brand */}
-
-          <h1>One Stop</h1>
-          {/* User */}
-
-          {logo ? (
-            <NavbarBrand className="pt-0" {...navbarBrandProps}>
-              <img
-                alt={logo.imgAlt}
-                className="navbar-brand-img"
-                src={logo.imgSrc}
-              />
+          {
+            <NavbarBrand className="pt-0" >
+              <h1>One Stop</h1>
             </NavbarBrand>
-          ) : null}
+          }
           {/* User */}
           <Nav className="align-items-center d-md-none">
             <UncontrolledDropdown nav>
@@ -142,17 +120,11 @@ class Sidebar extends React.Component {
               </DropdownToggle>
             </UncontrolledDropdown>
           </Nav>
-
           {/* Collapse */}
           <Collapse navbar isOpen={this.state.collapseOpen}>
             {/* Collapse header */}
             <div className="navbar-collapse-header d-md-none">
               <Row>
-
-                <Col>
-                  <h1>One Stop</h1>
-                </Col>
-
                 {logo ? (
                   <Col className="collapse-brand" xs="6">
                     {logo.innerLink ? (
@@ -166,7 +138,6 @@ class Sidebar extends React.Component {
                     )}
                   </Col>
                 ) : null}
-
                 <Col className="collapse-close" xs="6">
                   <button
                     className="navbar-toggler"
@@ -179,9 +150,6 @@ class Sidebar extends React.Component {
                 </Col>
               </Row>
             </div>
-
-            
-
             {/* Form */}
             <Form className="mt-4 mb-3 d-md-none">
               <InputGroup className="input-group-rounded input-group-merge">
@@ -198,7 +166,6 @@ class Sidebar extends React.Component {
                 </InputGroupAddon>
               </InputGroup>
             </Form>
-
             {/* Navigation */}
             <Nav navbar>{this.createLinks(routes)}</Nav>
             {/* Divider */}
@@ -209,41 +176,25 @@ class Sidebar extends React.Component {
             <Nav className="mb-md-3" navbar>
               <NavItem>
                 <NavLink href="https://www.linkedin.com/in/devdatta-pandey-2a4745199/">
-
                   <i className="fab fa-linkedin-in" />
-
-                  <i className="ni ni-ui-04" />
-
                   Devdatta Pandey
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://www.linkedin.com/in/karnsingh311/">
-
                   <i className="fab fa-linkedin-in" aria-hidden="true" />
-
-                  <i className="ni ni-ui-04" aria-hidden="true" />
-
                   Karn Kumar Singh
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://www.linkedin.com/in/shivam-tyagi-57b7341a6/">
-
                   <i className="fab fa-linkedin-in" />
-
-                  <i className="ni ni-ui-04" />
-
                   Shivam Tyagi
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://www.linkedin.com/in/mohd-zubair-3349871a1/">
-
                   <i className="fab fa-linkedin-in" />
-
-                  <i className="ni ni-ui-04" />
-
                   Mohd Zubair
                 </NavLink>
               </NavItem>

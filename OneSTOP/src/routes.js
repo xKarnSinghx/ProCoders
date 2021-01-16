@@ -1,3 +1,7 @@
+
+import Index from "views/Index.js";
+import Profile from "views/examples/Profile.js";
+
 /*!
 
 =========================================================
@@ -19,6 +23,7 @@ import Index from "views/Index.js";
 import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
 import Login from "views/examples/Login.js";
+
 import UpcomingContests from "views/examples/UpcomingContests.js";
 import Placements from "views/examples/Placements.js";
 import Open from "views/examples/Open.js";
@@ -59,6 +64,10 @@ var routes = [
     icon: "ni ni-air-baloon text-yellow",
     component: Open,
     layout: "/admin"
+
+  }
+  
+
   },
   {
     path: "/login",
@@ -74,5 +83,6 @@ var routes = [
     component: Register,
     layout: "/auth"
   }
+
 ];
 export default routes;

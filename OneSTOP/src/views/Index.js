@@ -1,3 +1,6 @@
+
+import React from "react";
+
 /*!
 
 =========================================================
@@ -41,6 +44,7 @@ import {
 // core components
 
 
+
 import Header from "components/Headers/Header.js";
 
 class Index extends React.Component {
@@ -48,7 +52,10 @@ class Index extends React.Component {
     return (
       <>
         <Header />
+
+
         {/* Page content */}
+
         
       </>
     );

@@ -1,3 +1,6 @@
+
+
+
 /*!
 
 =========================================================
@@ -15,6 +18,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+
 import React from "react";
 
 // reactstrap components
@@ -50,12 +54,20 @@ class Login extends React.Component {
                   href="#pablo"
                   onClick={e => e.preventDefault()}
                 >
+
+                  
+                  <span className="btn-inner--icon">
+                    <i className="fab fa-github"></i>
+                  </span>
+                  
+
                   <span className="btn-inner--icon">
                     <img
                       alt="..."
                       src={require("assets/img/icons/common/github.svg")}
                     />
                   </span>
+
                   <span className="btn-inner--text">Github</span>
                 </Button>
                 <Button
@@ -65,10 +77,14 @@ class Login extends React.Component {
                   onClick={e => e.preventDefault()}
                 >
                   <span className="btn-inner--icon">
+
+                    <i className="fab fa-google"></i>
+
                     <img
                       alt="..."
                       src={require("assets/img/icons/common/google.svg")}
                     />
+
                   </span>
                   <span className="btn-inner--text">Google</span>
                 </Button>
