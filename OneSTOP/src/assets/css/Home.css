@@ -1,0 +1,179 @@
+*{
+    scroll-behavior: smooth;
+}
+
+.HomePage-Container{
+    display:flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.HomePage-Container .content-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 50%;
+    padding: 20px;
+}
+
+.HomePage-Container .content-home h1{
+    font-size: 70px;
+    margin-bottom: -8px;
+}
+
+.HomePage-Container .content-home h2{
+    font-size: 20px;
+    padding: 0px 10px;
+}
+
+.HomePage-Container .content-home a{
+    margin: 0px 10px;
+    background-color: #2bffc6;
+    padding: 10px 30px;
+    width: fit-content;
+    color: black;
+    border-radius: 4px;
+    
+}
+
+.HomePage-Container .content-home a:hover{
+    background-color: #04f8b7;
+    box-shadow: 0px 5px 40px -15px gray;
+    transform: scale(1.03);
+}
+
+.HomePage-Container .svg-home{
+    min-width: 50%; 
+}
+
+#about{
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#about .about-svg{
+    width: 50%; 
+    
+}
+
+#about .about-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding: 20px;
+}
+
+#about .about-content .Heading h1{
+    font-size: 40px;
+}
+
+#about .about-content p{
+    font-size: 20px;
+}
+
+.facilities .Heading h1{
+    font-size: 40px;
+    text-align: center;
+    padding: 30px;
+}
+
+.facilities .facilities-card-container{
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: center;
+    color: #01579b;
+
+}
+
+.facilities .facilities-card-container .cards{
+    width: 350px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    background-color: #01579b;
+    color: white;
+    box-shadow: 2px 2px 40px -12px gray;
+    
+}
+
+.facilities .facilities-card-container .cards .Logo{
+    color: white;
+}
+
+.facilities .facilities-card-container .cards:hover{
+    background-color: transparent;
+    border: 2px solid #01579b;
+}
+.facilities .facilities-card-container .cards:hover .Logo{
+    color: #01579b;
+}
+
+.facilities .facilities-card-container .cards:hover h1{
+    color: #01579b;
+}
+
+.cards h1{
+    color: white;
+}
+
+
+
+@media screen and (max-width:1300px){
+    .content-home{
+        width: 50%;
+    }
+
+    #about .about-svg{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:1100px){
+    .content-home{
+        width: 80%;
+    }
+
+    #about .about-svg{
+        width: 80%;
+        
+    }
+    #about .about-content{
+        width: 90%;
+    }
+}
+@media screen and (max-width:900px){
+    .content-home{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .svg-home{
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    #about{
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+    }
+    #about .about-svg{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    #about .about-content{
+        width: 100%;
+    }
+}
