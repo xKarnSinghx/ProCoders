@@ -2,8 +2,6 @@
 import React from "react";
 import {Container, Row} from "reactstrap";
 import PlacementsInfo from '../../components/Placement/Placement';
-import React from "react";
-import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
 class Placement extends React.Component {
   render(){
     return (
@@ -19,8 +17,9 @@ class Placement extends React.Component {
           </div>
           <PlacementsInfo/>
       </>
-
-
+    );
+    }
+  }
 
 
 export default Placement;

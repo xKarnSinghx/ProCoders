@@ -2,7 +2,7 @@
 import React from "react";
 
 
-import React from "react";
+
 
 // reactstrap components
 
@@ -23,6 +23,7 @@ import UserHeader from "components/Headers/UserHeader.js";
 
 class Profile extends React.Component {
   render() {
+    
     return (
       <>
         <UserHeader />
@@ -32,7 +33,7 @@ class Profile extends React.Component {
             <Col className="order-xl-2 mb-5 mb-xl-0" xl="4">
               <Card className="card-profile shadow">
 
-                <CardBody className="pt-0 pt-md-4">
+                
 
                 <Row className="justify-content-center">
                   <Col className="order-lg-2" lg="3">
