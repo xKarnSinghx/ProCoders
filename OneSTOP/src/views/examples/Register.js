@@ -5,7 +5,7 @@ import React from "react";
 
 
 
-import React from "react";
+
 
 // reactstrap components
 
