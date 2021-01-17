@@ -8,6 +8,8 @@ import Upcoming from './Upcoming/Upcoming';
 import Company from './Company/Company';
 import CompanyProblems from './Company/CompanyProblems';
 import Home from './Home/Home';
+import "../assets/css/Contests.css";
+import "../assets/css/contests2.css";
 
 // import { buildGlobalSolutionData } from '../api/data/solutionsCreator';;
 
@@ -23,17 +25,14 @@ class App extends React.Component {
   }
 
   render() {
-    const { location } = this.props;
-    const { pathname } = location;
     return (
       <div>
-        <Navbar pathname={pathname} />
-
+        <Navbar/>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/company" component={Company} />
-          <Route exact path="/company/:id" component={CompanyProblems} />
-          <Route exact path="/upcoming" component={Upcoming} />
+          <Route  exact path="/admin/upcoming-contests/" component={Home} />
+          <Route  exact path="/admin/upcoming-contests/company" component={Company} />
+          <Route  exact path="/admin/upcoming-contests/company/:id" component={CompanyProblems} />
+          <Route  exact path="/admin/upcoming-contests/upcoming" component={Upcoming} />
           <Route component={FullScreenError} />
         </Switch>
       </div>

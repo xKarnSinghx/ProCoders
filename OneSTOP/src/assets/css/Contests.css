@@ -1,0 +1,210 @@
+  body {
+    padding-top: 50px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    background-color: #f8f9fa;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  .sidebar {
+    font-size: 0.9rem;
+  }
+  
+  @media (min-width: 768px) {
+    .sidebar {
+      position: fixed;
+      width: inherit;
+      max-width: inherit;
+      max-height: 96vh;
+      overflow-y: auto;
+    }
+  
+    .sidebar::-webkit-scrollbar {
+      width: 5px;
+    }
+  }
+  
+  .content-box {
+    min-height: 90vh;
+  }
+  
+  .loader {
+    position: relative;
+    width: inherit;
+    max-width: inherit;
+    top: 30%;
+  }
+  
+  .custom-toolkit {
+    border-radius: 100px;
+    font-size: smaller;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .btn:focus,
+  .btn:active,
+  .form-control:focus,
+  .form-control:active {
+    box-shadow: none;
+    outline: 0px;
+  }
+  
+  .overflow-x-auto {
+    overflow-y: auto;
+  }
+  
+  .search-input {
+    padding-right: 30px;
+    display: inline-block;
+  }
+  
+  .search-close {
+    font-size: xx-large;
+    margin-left: -30px;
+    padding-right: 5px;
+  }
+  
+  .search-close:focus,
+  .search-close span:focus {
+    outline: none;
+  }
+  
+  /* Navigation bar */
+  
+  #navbar {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    background-color: #173b5c;
+    z-index: 1060;
+    box-sizing: border-box;
+  }
+  
+  #navbar .navbar {
+    font-size: large;
+    padding: 15px;
+  }
+  
+  #navbar .navbar-brand {
+    font-weight: bold;
+    font-size: larger;
+    margin-right: 1rem;
+  }
+  
+  #navbar .active {
+    color: white;
+    font-weight: 400;
+  }
+  
+  /* Home */
+  
+  #home .head {
+    position: relative;
+    height: calc(100vh - 50px);
+    text-align: center;
+  }
+  
+  #home .head:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+  
+  #home .home-content {
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 60px;
+    width: 95%;
+    text-align: center;
+    max-width: 700px;
+    overflow-x: auto;
+  }
+  
+  #home .home-shadow-box {
+    display: inline-block;
+    vertical-align: middle;
+    background: #00000096;
+    border-radius: 2rem;
+  }
+  
+  .visits {
+    position: absolute;
+    right: 40px;
+    bottom: 30px;
+    padding: 1.2rem 1.4rem;
+    border-radius: 15rem;
+    color: white;
+    background-color: #00000096;
+    cursor: pointer;
+    box-shadow: 1rem 1rem rgba(0, 0, 0);
+  }
+  
+  .visits:hover,
+  .report-issue:hover {
+    background-color: #173b5c;
+  }
+  
+  .report-issue {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    padding: 1.2rem 1.2rem;
+    border-radius: 15rem;
+    color: white;
+    background-color: #00000096;
+    cursor: pointer;
+    box-shadow: 1rem 1rem rgba(0, 0, 0);
+  }
+  
+  
+  /* Problems Table */
+  
+  #problems-table {
+    overflow-x: auto;
+    min-height: 90vh;
+  }
+  
+  #problems-table {
+    border-radius: 8px;
+  }
+  
+  #problems-table .problem-solved .list-group-item {
+    background-color: rgb(182, 243, 243);
+  }
+  
+  #problems-table .problem-solved .list-group-item.active {
+    background-color: #173b5c;
+    color: white;
+  }
+  
+  #problems-table .list-group-item.active {
+    background-color: #173b5c;
+    border-color: #173b5c;
+    color: white;
+  }
+  
+  #problems-table .problems-inner-table {
+    font-size: medium;
+  }  
+  /* Upcoming */
+  
+  .upcoming-content {
+    overflow-x: auto;
+  }
+  
+  #upcoming-table th {
+    background-color: #173b5c;
+    color: white;
+    font-size: medium;
+  }
+  
+  .upcoming-logo {
+    height: 35px;
+    width: 35px;
+  }
+  
