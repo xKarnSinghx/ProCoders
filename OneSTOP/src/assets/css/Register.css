@@ -1,0 +1,78 @@
+.content-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 50%;
+    padding: 20px;
+}
+
+.content-main h1{
+    font-size: 70px;
+    margin-bottom: -8px;
+    color: white;
+}
+
+.content-main h2{
+    font-size: 20px;
+    padding: 0px 10px;
+    color: white;
+}
+
+.content-main p{
+    padding: 0px 10px;
+    color: white;
+}
+
+.facilities-new .Heading h1{
+    font-size: 40px;
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
+
+
+.facilities-new .facilities-new-card-container{
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: center;
+    color: #01579b;
+
+}
+
+.facilities-new .facilities-new-card-container .cards{
+    width: 350px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    background-color: #01579b;
+    color: white;
+    box-shadow: 0px 0px 20px -20px white;
+    
+}
+
+.facilities-new .facilities-new-card-container .cards .Logo{
+    color: white;
+}
+
+.facilities-new .facilities-new-card-container .cards:hover{
+    background-color: white;
+    border: 2px solid #01579b;
+}
+.facilities-new .facilities-new-card-container .cards:hover .Logo{
+    color: #01579b;
+}
+
+.facilities-new .facilities-new-card-container .cards:hover h1{
+    color: #01579b;
+}
+
+.cards h1{
+    color: white;
+}
+
