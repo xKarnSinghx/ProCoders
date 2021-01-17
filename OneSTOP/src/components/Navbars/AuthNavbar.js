@@ -23,7 +23,7 @@ class AdminNavbar extends React.Component {
           <Container className="px-4">
             <NavbarBrand to="/" tag={Link}>
 
-            <span className="nav-link-inner--text">One Stop</span>
+            <span className="nav-link-inner--text">OneSTOP</span>
             </NavbarBrand>
             <button className="navbar-toggler" id="navbar-collapse-main">
               <span className="navbar-toggler-icon" />
@@ -34,7 +34,7 @@ class AdminNavbar extends React.Component {
                   <Col className="collapse-brand" xs="6">
                     <Link to="/">
 
-                    <h1>One Stop</h1>
+                    <h1>OneSTOP</h1>
 
                     </Link>
                   </Col>

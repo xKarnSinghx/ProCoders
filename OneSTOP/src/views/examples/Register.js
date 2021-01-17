@@ -108,12 +108,12 @@ export default function Register(){
         </Col>        
           <div className="content-main">
             <br/><br/>
-            <h1>One Stop</h1>
+            <h1>OneSTOP</h1>
             <h2>A One Stop Solution For All Engineering Students</h2>
             <br/>
             <h2>About Us</h2>
             <p>
-              We at OneStop are committed to provide all those relevant information and details which every engineering student seeks for. It is one stop where you can get information of current contests or competition and even placement records of any Institute in India.<br/>You can register yourself to add remainders to get notification for important events.
+              We at OneSTOP are committed to provide all those relevant information and details which every engineering student seeks for. It is one stop where you can get information of current contests or competition and even placement records of any Institute in India.<br/>You can register yourself to add remainders to get notification for important events.
               Its the simplest but most practical solution to help them and keep them updated.
             </p>
           </div>
@@ -133,7 +133,7 @@ export default function Register(){
                 <div className='Logo'>
                 <i class="fas fa-clock fa-2x" aria-hidden="true"/>
                 </div>
-                <h1>Set Contest Remainders</h1>
+                <h1>Set Contest Reminders</h1>
               </div>
 
               <div className="cards">

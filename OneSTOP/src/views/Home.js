@@ -9,7 +9,7 @@ class Home extends React.Component {
         <Header />
         <div className="HomePage-Container">
           <div className="content-home">
-            <h1>One Stop</h1>
+            <h1>OneSTOP</h1>
             <h2>A One Stop Solution For All Engineering Students</h2>
             <a href="#about">About Us</a>
           </div>
@@ -25,7 +25,7 @@ class Home extends React.Component {
           <div className="about-content">
             <div className="Heading"><h1>About Us</h1></div>
             <p>
-              We at OneStop are committed to provide all those relevant information and details which every engineering student seeks for. It is one stop where you can get information of current contests or competition and even placement records of any Institute in India.<br/>You can register yourself to add remainders to get notification for important events.
+              We at OneSTOP are committed to provide all those relevant information and details which every engineering student seeks for. It is one stop where you can get information of current contests or competition and even placement records of any Institute in India.<br/>You can register yourself to add remainders to get notification for important events.
               Its the simplest but most practical solution to help them and keep them updated.
             </p>
           </div>
@@ -46,7 +46,7 @@ class Home extends React.Component {
                 <div className='Logo'>
                 <i class="fas fa-clock fa-2x" aria-hidden="true"/>
                 </div>
-                <h1>Set Contest Remainders</h1>
+                <h1>Set Contest Reminders</h1>
               </div>
 
               <div className="cards">
