@@ -51,14 +51,6 @@ class AdminNavbar extends React.Component {
               </div>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink className="nav-link-icon" to="/" tag={Link}>
-                    <i className="ni ni-planet" />
-
-                    <span className="nav-link-inner--text">Home</span>
-
-                  </NavLink>
-                </NavItem>
-                <NavItem>
                   <NavLink
                     className="nav-link-icon"
                     to="/auth/register"

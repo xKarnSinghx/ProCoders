@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// reactstrap components
+import "../../assets/css/Register.css";
 import {useAuth} from "../../contexts/AuthContext";
 import {
   CardHeader,
@@ -49,7 +49,7 @@ export default function Register(){
             <CardBody className="px-lg-5 py-lg-5">
               {error && <Alert variant="danger">{error}</Alert>}
               <div className="text-center text-muted mb-4">
-                <h2>Sign Up With Email</h2>
+                <h2>Sign Up With Credentials</h2>
               </div>
 
               <Form role="form" onSubmit={handleSubmit}>
@@ -105,7 +105,54 @@ export default function Register(){
               </Form>
             </CardBody>
           </Card>
-        </Col>
+        </Col>        
+          <div className="content-main">
+            <br/><br/>
+            <h1>One Stop</h1>
+            <h2>A One Stop Solution For All Engineering Students</h2>
+            <br/>
+            <h2>About Us</h2>
+            <p>
+              We at OneStop are committed to provide all those relevant information and details which every engineering student seeks for. It is one stop where you can get information of current contests or competition and even placement records of any Institute in India.<br/>You can register yourself to add remainders to get notification for important events.
+              Its the simplest but most practical solution to help them and keep them updated.
+            </p>
+          </div>
+
+          <div className="facilities-new">
+            <div className="Heading"><h1>What We provide</h1></div>
+            <div className="facilities-new-card-container">
+
+              <div className="cards">
+                <div className='Logo'>
+                <i class="fas fa-list fa-2x" aria-hidden="true"/>
+                </div>
+                <h1>Gather Placement Details</h1>
+              </div>
+
+              <div className="cards">
+                <div className='Logo'>
+                <i class="fas fa-clock fa-2x" aria-hidden="true"/>
+                </div>
+                <h1>Set Contest Remainders</h1>
+              </div>
+
+              <div className="cards">
+                <div className='Logo'>
+                  <i class="fas fa-lightbulb fa-2x" aria-hidden="true"/>
+                </div>
+                <h1>Search For Your Perfect Job</h1>
+              </div>
+
+              <div className="cards">
+                <div className='Logo'>
+                  <i className="fas fa-trophy fa-2x"/>
+                </div>
+                <h1>Get Updated About Upcoming Contests</h1>
+                
+              </div>
+            </div>
+        </div>
+
       </>
     );
   

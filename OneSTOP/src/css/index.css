@@ -1,0 +1,277 @@
+html,
+body {
+  margin: 0px;
+}
+
+body {
+  padding-top: 50px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  background-color: #f8f9fa;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.sidebar {
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    width: inherit;
+    max-width: inherit;
+    max-height: 96vh;
+    overflow-y: auto;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+
+.content-box {
+  min-height: 90vh;
+}
+
+.loader {
+  position: relative;
+  width: inherit;
+  max-width: inherit;
+  top: 30%;
+}
+
+.custom-toolkit {
+  border-radius: 100px !important;
+  font-size: smaller;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.btn:focus,
+.btn:active,
+.form-control:focus,
+.form-control:active {
+  box-shadow: none !important;
+  outline: 0px !important;
+}
+
+.overflow-x-auto {
+  overflow-y: auto;
+}
+
+.search-input {
+  padding-right: 30px;
+  display: inline-block;
+}
+
+.search-close {
+  font-size: xx-large;
+  margin-left: -30px;
+  padding-right: 5px !important;
+}
+
+.search-close:focus,
+.search-close span:focus {
+  outline: none !important;
+}
+
+/* Navigation bar */
+
+#navbar {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  background-color: #173b5c;
+  background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  z-index: 1060;
+  box-sizing: border-box;
+}
+
+#navbar .navbar {
+  font-size: large;
+  padding: 0.25rem 1rem !important;
+}
+
+#navbar .navbar-brand {
+  font-weight: bold;
+  font-size: larger;
+  margin-right: 1rem;
+}
+
+#navbar .active {
+  color: white;
+  font-weight: 400;
+}
+
+/* Home */
+
+#home .head {
+  position: relative;
+  height: calc(100vh - 50px);
+  text-align: center;
+}
+
+#home .head:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+#home .home-content {
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 60px;
+  width: 95%;
+  text-align: center;
+  max-width: 700px;
+  overflow-x: auto;
+}
+
+#home .home-shadow-box {
+  display: inline-block;
+  vertical-align: middle;
+  background: #00000096;
+  border-radius: 2rem;
+}
+
+.visits {
+  position: absolute;
+  right: 40px;
+  bottom: 30px;
+  padding: 1.2rem 1.4rem;
+  border-radius: 15rem;
+  color: white;
+  background-color: #00000096;
+  cursor: pointer;
+  box-shadow: 1rem 1rem rgba(0, 0, 0);
+}
+
+.visits:hover,
+.report-issue:hover {
+  background-color: #173b5c;
+}
+
+.report-issue {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  padding: 1.2rem 1.2rem;
+  border-radius: 15rem;
+  color: white;
+  background-color: #00000096;
+  cursor: pointer;
+  box-shadow: 1rem 1rem rgba(0, 0, 0);
+}
+
+/* codeforces */
+
+#cf-table {
+  overflow-x: auto;
+  min-height: 90vh;
+}
+
+#cf-table th {
+  background-color: #173b5c;
+}
+
+#cf-table .bg-solved {
+  background-color: #21d4fd;
+  background-image: linear-gradient(270deg, #21a2fd 0%, #b721ff 100%);
+}
+
+#cf-table .bg-unsolved {
+  background-color: #dc3545;
+  background: -webkit-linear-gradient(to left, #f58e19, #f12711);
+  background: linear-gradient(to left, #f58e19, #f12711);
+}
+
+#cf-table .bg-completed {
+  background-color: green;
+  background: #00b09b;
+  background: -webkit-linear-gradient(to left, #237e2a, #00b09b);
+  background: linear-gradient(to left, #237e2a, #00b09b);
+}
+
+.bg-solved a,
+.bg-unsolved a,
+.bg-completed a {
+  color: white !important;
+}
+
+/* Codechef */
+
+#cc-container {
+  overflow-x: auto;
+  min-height: 90vh;
+}
+
+#cc-table th {
+  background-color: #173b5c;
+}
+
+/* Problems Table */
+
+#problems-table {
+  overflow-x: auto;
+  min-height: 90vh;
+}
+
+#problems-table {
+  border-radius: 8px;
+}
+
+#problems-table .problem-solved .list-group-item {
+  background-color: rgb(182, 243, 243);
+}
+
+#problems-table .problem-solved .list-group-item.active {
+  background-color: #173b5c;
+}
+
+#problems-table .list-group-item.active {
+  background-color: #173b5c;
+  border-color: #173b5c;
+}
+
+#problems-table .problems-inner-table {
+  font-size: small;
+}
+
+/* Company */
+.company-container {
+  overflow-x: auto;
+}
+
+#company-table th {
+  background-color: #173b5c;
+}
+
+#company-table .bg-solved {
+  background-color: #21d4fd;
+  background-image: linear-gradient(270deg, #21a2fd 0%, #b721ff 100%);
+}
+
+#company-table .bg-reviewed {
+  background-color: #dc3545;
+  background: -webkit-linear-gradient(to left, #f58e19, #f12711);
+  background: linear-gradient(to left, #f58e19, #f12711);
+}
+
+/* Upcoming */
+
+.upcoming-content {
+  overflow-x: auto;
+}
+
+#upcoming-table th {
+  background-color: #173b5c;
+}
+
+.upcoming-logo {
+  height: 25px;
+  width: 25px;
+}

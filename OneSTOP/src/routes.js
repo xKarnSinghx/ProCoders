@@ -1,6 +1,5 @@
 
 import Home from "views/Home.js";
-import Profile from "views/examples/Profile.js";
 import UpcomingContests from "views/examples/UpcomingContests.js";
 import Placements from "views/examples/Placements.js";
 import Open from "views/examples/Open.js";
@@ -12,13 +11,6 @@ var routes = [
     name: "Home",
     icon: "ni ni-shop text-primary",
     component: Home,
-    layout: "/admin"
-  },
-  {
-    path: "/user-profile",
-    name: "User Profile",
-    icon: "ni ni-single-02 text-blue",
-    component: Profile,
     layout: "/admin"
   },
   {

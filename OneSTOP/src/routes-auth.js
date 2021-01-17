@@ -6,13 +6,6 @@ import Login from "views/examples/Login.js";
 
 var routesAuth = [
   {
-    path: "/home",
-    name: "Home",
-    icon: "ni ni-shop text-primary",
-    component: Home,
-    layout: "/admin"
-  },
-  {
     path: "/login",
     name: "Login",
     icon: "ni ni-key-25 text-info",
