@@ -1,14 +1,10 @@
 import React from "react";
-
+import {useAuth} from "../../contexts/AuthContext";
+import {Link, useHistory} from "react-router-dom";
 // reactstrap components
 import {
-  Button,
-  Card,
-  CardHeader,
   CardBody,
   FormGroup,
-  Form,
-  Input,
   InputGroupAddon,
   InputGroupText,
   InputGroup,
@@ -16,48 +12,43 @@ import {
   Col
 } from "reactstrap";
 
-class Login extends React.Component {
-  render() {
+import {Form, Button, Card, Alert} from 'react-bootstrap';
+import { useRef, useState } from "react";
+
+export default function Login(){
+
+  const emailRef = useRef()
+  const passRef = useRef()
+  const { login } = useAuth()
+  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false)
+  const history = useHistory();
+
+  async function handleSubmit(e){
+    e.preventDefault()
+    
+    try{
+      setError("");
+      setLoading(true)
+      await login(emailRef.current.value, passRef.current.value)
+      history.push("/admin/index")
+    }catch{
+      setError("Failed To Sign In to your account");
+    }
+    setLoading(false)
+  }
+
     return (
       <>
         <Col lg="5" md="7">
           <Card className="bg-secondary shadow border-0">
-            <CardHeader className="bg-transparent pb-5">
-              <div className="text-muted text-center mt-2 mb-3">
-                <small>Sign in with</small>
-              </div>
-              <div className="btn-wrapper text-center">
-                <Button
-                  className="btn-neutral btn-icon"
-                  color="default"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-
-                  
-                  <span className="btn-inner--icon">
-                    <i className="fab fa-github"></i>
-                  </span>
-                  <span className="btn-inner--text">Github</span>
-                </Button>
-                <Button
-                  className="btn-neutral btn-icon"
-                  color="default"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  <span className="btn-inner--icon">
-                    <i className="fab fa-google"></i>
-                  </span>
-                  <span className="btn-inner--text">Google</span>
-                </Button>
-              </div>
-            </CardHeader>
+            
             <CardBody className="px-lg-5 py-lg-5">
+              {error && <Alert variant="danger">{error}</Alert>}
               <div className="text-center text-muted mb-4">
-                <small>Or sign in with credentials</small>
+                <small>Sign in With Credentials</small>
               </div>
-              <Form role="form">
+              <Form role="form" onSubmit={handleSubmit}>
                 <FormGroup className="mb-3">
                   <InputGroup className="input-group-alternative">
                     <InputGroupAddon addonType="prepend">
@@ -65,7 +56,7 @@ class Login extends React.Component {
                         <i className="ni ni-email-83" />
                       </InputGroupText>
                     </InputGroupAddon>
-                    <Input placeholder="Email" type="email" autoComplete="new-email"/>
+                    <Form.Control placeholder="Email" type="email" ref={emailRef} required/>
                   </InputGroup>
                 </FormGroup>
                 <FormGroup>
@@ -75,7 +66,7 @@ class Login extends React.Component {
                         <i className="ni ni-lock-circle-open" />
                       </InputGroupText>
                     </InputGroupAddon>
-                    <Input placeholder="Password" type="password" autoComplete="new-password"/>
+                    <Form.Control placeholder="Password" type="password" ref={passRef} required/>
                   </InputGroup>
                 </FormGroup>
                 <div className="custom-control custom-control-alternative custom-checkbox">
@@ -92,7 +83,7 @@ class Login extends React.Component {
                   </label>
                 </div>
                 <div className="text-center">
-                  <Button className="my-4" color="primary" type="button">
+                  <Button disabled={loading} className="my-4" color="primary" type="submit">
                     Sign in
                   </Button>
                 </div>
@@ -110,19 +101,14 @@ class Login extends React.Component {
               </a>
             </Col>
             <Col className="text-right" xs="6">
-              <a
-                className="text-light"
-                href="#pablo"
-                onClick={e => e.preventDefault()}
-              >
-                <small>Create new account</small>
-              </a>
+              <span className="text-light">
+                <small>Create new account <Link to="register">SignUp here</Link></small>
+              </span>
             </Col>
           </Row>
         </Col>
       </>
     );
-  }
+  
 }
 
-export default Login;

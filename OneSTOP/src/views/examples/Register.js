@@ -1,126 +1,104 @@
-
-
-import React from "react";
-
-
-
-
-
-
+import React, { useState } from "react";
 // reactstrap components
-
+import {useAuth} from "../../contexts/AuthContext";
 import {
-  Button,
-  Card,
   CardHeader,
   CardBody,
-  FormGroup,
-  Form,
   Input,
   InputGroupAddon,
   InputGroupText,
   InputGroup,
   Row,
+  FormGroup,
   Col
 } from "reactstrap";
 
-class Register extends React.Component {
-  render() {
+import {Form, Button, Card, Alert} from 'react-bootstrap';
+import { useRef } from "react";
+import { useHistory } from "react-router-dom";
+
+
+export default function Register(){
+  const emailRef = useRef()
+  const passRef = useRef()
+  const confirmPassRef = useRef()
+  const { signUp } = useAuth()
+  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false)
+  const history = useHistory()
+
+  async function handleSubmit(e){
+    e.preventDefault()
+    if(passRef.current.value !== confirmPassRef.current.value){
+      return setError("Password Do not match");
+    }
+    try{
+      setError("");
+      setLoading(true)
+      await signUp(emailRef.current.value, passRef.current.value)
+      history.push('login');
+    }catch{
+      setError("Failed To create and account");
+    }
+    setLoading(false)
+  }
     return (
       <>
         <Col lg="6" md="8">
           <Card className="bg-secondary shadow border-0">
-            <CardHeader className="bg-transparent pb-5">
-              <div className="text-muted text-center mt-2 mb-4">
-                <small>Sign up with</small>
-              </div>
-              <div className="text-center">
-                <Button
-                  className="btn-neutral btn-icon mr-4"
-                  color="default"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  <span className="btn-inner--icon">
-
-                    <i className="fab fa-github"></i>
-                  </span>
-                  <span className="btn-inner--text">Github</span>
-                </Button>
-                <Button
-                  className="btn-neutral btn-icon"
-                  color="default"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  <span className="btn-inner--icon">
-
-                    <i className="fab fa-google"></i>
-                  </span>
-                  <span className="btn-inner--text">Google</span>
-                </Button>
-              </div>
-            </CardHeader>
             <CardBody className="px-lg-5 py-lg-5">
+              {error && <Alert variant="danger">{error}</Alert>}
               <div className="text-center text-muted mb-4">
-                <small>Or sign up with credentials</small>
+                <h2>Sign Up With Email</h2>
               </div>
-              <Form role="form">
-                <FormGroup>
+
+              <Form role="form" onSubmit={handleSubmit}>
+
+                <Form.Group id="name">
                   <InputGroup className="input-group-alternative mb-3">
                     <InputGroupAddon addonType="prepend">
                       <InputGroupText>
                         <i className="ni ni-hat-3" />
                       </InputGroupText>
                     </InputGroupAddon>
-                    <Input placeholder="Name" type="text" />
+                    <Input placeholder="Name" type="text" required/>
                   </InputGroup>
-                </FormGroup>
-                <FormGroup>
+                </Form.Group>
+
+                <Form.Group id="email">
                   <InputGroup className="input-group-alternative mb-3">
                     <InputGroupAddon addonType="prepend">
                       <InputGroupText>
                         <i className="ni ni-email-83" />
                       </InputGroupText>
                     </InputGroupAddon>
-                    <Input placeholder="Email" type="email" autoComplete="new-email"/>
+                    <Form.Control placeholder="Email" type="email" ref={emailRef} required/>
                   </InputGroup>
-                </FormGroup>
-                <FormGroup>
+                </Form.Group>
+
+                <Form.Group id="password">
                   <InputGroup className="input-group-alternative">
                     <InputGroupAddon addonType="prepend">
                       <InputGroupText>
                         <i className="ni ni-lock-circle-open" />
                       </InputGroupText>
                     </InputGroupAddon>
-                    <Input placeholder="Password" type="password" autoComplete="new-password"/>
+                    <Form.Control placeholder="Password" type="password" ref={passRef} required/>
                   </InputGroup>
-                </FormGroup>
+                </Form.Group>
+                <Form.Group id="confirm-pass">
+                  <InputGroup className="input-group-alternative">
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>
+                        <i className="ni ni-lock-circle-open" />
+                      </InputGroupText>
+                    </InputGroupAddon>
+                    <Form.Control placeholder="Confirm Password" type="password" ref={confirmPassRef} required/>
+                  </InputGroup>
+                </Form.Group>
                 
-                <Row className="my-4">
-                  <Col xs="12">
-                    <div className="custom-control custom-control-alternative custom-checkbox">
-                      <input
-                        className="custom-control-input"
-                        id="customCheckRegister"
-                        type="checkbox"
-                      />
-                      <label
-                        className="custom-control-label"
-                        htmlFor="customCheckRegister"
-                      >
-                        <span className="text-muted">
-                          I confirm the{" "}
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            credentials
-                          </a>
-                        </span>
-                      </label>
-                    </div>
-                  </Col>
-                </Row>
                 <div className="text-center">
-                  <Button className="mt-4" color="primary" type="button">
+                  <Button disabled={loading} className="mt-4" color="primary" type="submit">
                     Create account
                   </Button>
                 </div>
@@ -130,7 +108,6 @@ class Register extends React.Component {
         </Col>
       </>
     );
-  }
+  
 }
 
-export default Register;
