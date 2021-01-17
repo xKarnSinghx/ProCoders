@@ -35,7 +35,7 @@ Website is live </br>
 
 Supported Scripts Run Project npm start Build Project npm run build Prettify Code npm run prettify Test npm run test </br>
 
-#Credits- </br>
+# Credits- </br>
 Devdatta Pandey </br>
 Karn Kumar Singh </br>
 Mohd. Zubair </br>
