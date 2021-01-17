@@ -1,9 +1,6 @@
 
-import Index from "views/Index.js";
+import Home from "views/Home.js";
 import Profile from "views/examples/Profile.js";
-import Register from "views/examples/Register.js";
-import Login from "views/examples/Login.js";
-
 import UpcomingContests from "views/examples/UpcomingContests.js";
 import Placements from "views/examples/Placements.js";
 import Open from "views/examples/Open.js";
@@ -11,10 +8,10 @@ import Open from "views/examples/Open.js";
 
 var routes = [
   {
-    path: "/index",
+    path: "/home",
     name: "Home",
     icon: "ni ni-shop text-primary",
-    component: Index,
+    component: Home,
     layout: "/admin"
   },
   {
@@ -45,20 +42,6 @@ var routes = [
     component: Open,
     layout: "/admin"
 
-  },
-  {
-    path: "/login",
-    name: "Login",
-    icon: "ni ni-key-25 text-info",
-    component: Login,
-    layout: "/auth"
-  },
-  {
-    path: "/register",
-    name: "Register",
-    icon: "ni ni-circle-08 text-pink",
-    component: Register,
-    layout: "/auth"
   }
 
 ];

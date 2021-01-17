@@ -1,15 +1,15 @@
-import Index from "views/Index.js";
+import Home from "views/Home.js";
 import Register from "views/examples/Register.js";
 import Login from "views/examples/Login.js";
 
 
 
-var routes = [
+var routesAuth = [
   {
-    path: "/index",
+    path: "/home",
     name: "Home",
     icon: "ni ni-shop text-primary",
-    component: Index,
+    component: Home,
     layout: "/admin"
   },
   {
@@ -28,4 +28,4 @@ var routes = [
   },
   
 ];
-export default routes;
+export default routesAuth;

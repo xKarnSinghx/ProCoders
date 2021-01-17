@@ -1,0 +1,23 @@
+.Job-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.Job-container .heading h1{
+    font-size: 30px;
+    padding: 25px;
+}
+
+.Job-container .Links{
+    display: flex;
+    flex-direction: column;
+}
+
+.Job-container .Links >a{
+    background-color: #01579b;
+    display: inline;
+    padding: 20px;
+    color: white;
+    margin: 20px;
+    width: fit-content;
+}
