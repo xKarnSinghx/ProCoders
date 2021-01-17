@@ -35,7 +35,7 @@ Tech Stack
 ->Refer here
 Run Software
 -> Clone Repo
--> git clone https://github.com/Surya1231/ContestMania.git
+-> git clone 
 -> Change Directory
 -> cd ProCoders/
 -> Install Dependencies
