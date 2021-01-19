@@ -25,18 +25,21 @@ Website is live </br>
 •	Install Node.Js and npm </br>
 •	Refer here Run Software </br>
 •	Clone Repo </br>
-•	git clone </br>
+	git clone https://github.com/MrUltimate-Karn/ProCoders.git</br>
 •	Change Directory </br> 
-•	cd ProCoders/ </br>
+	cd ProCoders/ </br>
 •	Install Dependencies </br> 
-•	npm install </br>
+	npm install </br>
 •	Start server </br>
-•	npm start </br>
+	npm start </br>
 
 Supported Scripts Run Project npm start Build Project npm run build Prettify Code npm run prettify Test npm run test </br>
 
-# Credits- </br>
-Devdatta Pandey </br>
-Karn Kumar Singh </br>
-Mohd. Zubair </br>
-Shivam Tyagi </br>
+## Youtube Link
+[This is the link of video walkthrough of our project](https://www.youtube.com/watch?v=5Ksbrf-4-PU)</br>
+
+## Credits </br>
+[Devdatta Pandey](https://github.com/devdattapandey2512) </br>
+[Karn Kumar Singh](https://github.com/MrUltimate-Karn) </br>
+[Mohd. Zubair](https://github.com/Mohdzubair3056) </br>
+[Shivam Tyagi](https://github.com/ShivamTyagi12345) </br>
