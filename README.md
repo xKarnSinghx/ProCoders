@@ -16,7 +16,6 @@ Website is live </br>
 
 ## Tech Stack </br>
 •	React.js </br>
-•	create-react-app </br> 
 •	firebase </br>
 •	bootstrap </br>
 •	redux </br>
